@@ -708,6 +708,8 @@ open class SkyFloatingLabelTextField: UITextField { // swiftlint:disable:this ty
             width: superRect.size.width - 20,
             height: superRect.size.height - titleHeight - selectedLineHeight
         )
+        
+        self.updateBorderView()
         return rect
     }
 
@@ -726,6 +728,9 @@ open class SkyFloatingLabelTextField: UITextField { // swiftlint:disable:this ty
             width: superRect.size.width - 20,
             height: superRect.size.height - titleHeight - selectedLineHeight
         )
+        
+        self.updateBorderView()
+        
         return rect
     }
 
@@ -744,7 +749,7 @@ open class SkyFloatingLabelTextField: UITextField { // swiftlint:disable:this ty
             width: superRect.size.width - 20,
             height: superRect.size.height - titleHeight - selectedLineHeight
         )
-      
+      self.updateBorderView()
 //        let rect = CGRect(
 //            x: superRect.origin.x ,
 //            y: titleHeight,
