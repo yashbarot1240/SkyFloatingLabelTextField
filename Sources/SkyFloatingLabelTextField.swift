@@ -48,7 +48,7 @@ open class SkyFloatingLabelTextField: UITextField { // swiftlint:disable:this ty
         borderLayer.translatesAutoresizingMaskIntoConstraints = false
         
         if #available(iOS 9.0, *) {
-            borderLayer.topAnchor.constraint(equalTo: self.topAnchor, constant: (borderFrame.origin.y + 3 + (titleHeight() * 0.5))).isActive = true
+              borderLayer.topAnchor.constraint(equalTo: self.topAnchor, constant: (borderFrame.origin.y + 3 + (titleHeight() * 0.5))).isActive = true
             borderLayer.rightAnchor.constraint(equalTo: self.rightAnchor, constant: 0).isActive = true
             borderLayer.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 0).isActive = true
             
@@ -550,7 +550,7 @@ open class SkyFloatingLabelTextField: UITextField { // swiftlint:disable:this ty
         
     }
     
-    fileprivate func updateBorderView() {
+     func updateBorderView() {
          let borderFrame = self.bounds
         
        let  borderView = borderLayer
