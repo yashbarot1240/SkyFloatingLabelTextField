@@ -22,6 +22,7 @@ extension String {
         return !isEmpty
     }
 }
+@available(iOS 9.0, *)
 @IBDesignable
 open class SkyFloatingLabelTextField: UITextField { // swiftlint:disable:this type_body_length
     /**
@@ -43,7 +44,20 @@ open class SkyFloatingLabelTextField: UITextField { // swiftlint:disable:this ty
     private func createBorder() {
         let borderFrame = self.bounds
         
-        borderLayer.frame = CGRect(x: borderFrame.origin.x, y: (borderFrame.origin.y + 3 + (titleHeight() * 0.5)), width: borderFrame.size.width, height: (borderFrame.size.height - (titleHeight() * 0.5)) )
+//        borderLayer.frame = CGRect(x: borderFrame.origin.x, y: (borderFrame.origin.y + 3 + (titleHeight() * 0.5)), width: borderFrame.size.width, height: (borderFrame.size.height - (titleHeight() * 0.5)) )
+        borderLayer.translatesAutoresizingMaskIntoConstraints = false
+        
+        if #available(iOS 9.0, *) {
+            borderLayer.topAnchor.constraint(equalTo: self.topAnchor, constant: (borderFrame.origin.y + 3 + (titleHeight() * 0.5))).isActive = true
+            borderLayer.rightAnchor.constraint(equalTo: self.rightAnchor, constant: 0).isActive = true
+            borderLayer.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 0).isActive = true
+            
+            borderLayer.heightAnchor.constraint(equalToConstant: (borderFrame.size.height - (titleHeight() * 0.5))).isActive = true
+        } else {
+            // Fallback on earlier versions
+        }
+      
+        
 //        borderLayer.layer.borderWidth = (isFirstResponder || text!.isNotEmpty) ? borderSize.active : borderSize.inactive
         //        borderLayer.backgroundColor = UIColor.red.withAlphaComponent(0.3).cgColor
         //        borderLayer.cornerRadius = 5
@@ -541,7 +555,19 @@ open class SkyFloatingLabelTextField: UITextField { // swiftlint:disable:this ty
         
        let  borderView = borderLayer
           let height = editingOrSelected ? selectedBorderHeight : borderHeight
-        borderView.frame =  CGRect(x: borderFrame.origin.x, y: (borderFrame.origin.y + 3 + (titleHeight() * 0.5)), width: borderFrame.size.width, height: (borderFrame.size.height - (titleHeight() * 0.5)) )
+//        borderView.frame =  CGRect(x: borderFrame.origin.x, y: (borderFrame.origin.y + 3 + (titleHeight() * 0.5)), width: borderFrame.size.width, height: (borderFrame.size.height - (titleHeight() * 0.5)) )
+        borderLayer.translatesAutoresizingMaskIntoConstraints = false
+        
+        if #available(iOS 9.0, *) {
+            borderLayer.topAnchor.constraint(equalTo: self.topAnchor, constant: (borderFrame.origin.y + 3 + (titleHeight() * 0.5))).isActive = true
+            borderLayer.rightAnchor.constraint(equalTo: self.rightAnchor, constant: 0).isActive = true
+            borderLayer.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 0).isActive = true
+            
+            borderLayer.heightAnchor.constraint(equalToConstant: (borderFrame.size.height - (titleHeight() * 0.5))).isActive = true
+        } else {
+            // Fallback on earlier versions
+        }
+        
         borderLayer.layer.borderWidth = height
         updateBorderColor()
     }
