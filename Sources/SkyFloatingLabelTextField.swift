@@ -45,7 +45,7 @@ open class SkyFloatingLabelTextField: UITextField { // swiftlint:disable:this ty
         let borderFrame = self.bounds
         
         borderLayer.frame = CGRect(x: borderFrame.origin.x, y: (borderFrame.origin.y + 3 + (titleHeight() * 0.5)), width: borderFrame.size.width, height: (borderFrame.size.height - (titleHeight() * 0.5)) )
-        borderLayer.translatesAutoresizingMaskIntoConstraints = false
+        borderLayer.translatesAutoresizingMaskIntoConstraints = true
         
         //        if #available(iOS 9.0, *) {
         //              borderLayer.topAnchor.constraint(equalTo: self.topAnchor, constant: (borderFrame.origin.y + 3 + (titleHeight() * 0.5))).isActive = true
@@ -474,9 +474,12 @@ open class SkyFloatingLabelTextField: UITextField { // swiftlint:disable:this ty
         titleLabel.alpha = 0.0
         titleLabel.textColor = titleColor
         titleLabel.backgroundColor = UIColor.white
+        titleLabel.tintColor =  UIColor.white
+        
         addSubview(titleLabel)
         
         self.titleLabel = titleLabel
+        self.titleLabel.shadowOffset = CGSize(width: 0, height: 0)
         titleLabel.sizeToFit()
     }
     
@@ -556,7 +559,7 @@ open class SkyFloatingLabelTextField: UITextField { // swiftlint:disable:this ty
         let  borderView = borderLayer
         let height = editingOrSelected ? selectedBorderHeight : borderHeight
         borderView.frame =  CGRect(x: borderFrame.origin.x, y: (borderFrame.origin.y + 3 + (titleHeight() * 0.5)), width: borderFrame.size.width, height: (borderFrame.size.height - (titleHeight() * 0.5)) )
-        borderLayer.translatesAutoresizingMaskIntoConstraints = false
+        borderLayer.translatesAutoresizingMaskIntoConstraints = true
         
         //        if #available(iOS 9.0, *) {
         //            borderLayer.topAnchor.constraint(equalTo: self.topAnchor, constant: (borderFrame.origin.y + 3 + (titleHeight() * 0.5))).isActive = true
@@ -660,6 +663,7 @@ open class SkyFloatingLabelTextField: UITextField { // swiftlint:disable:this ty
         titleLabel.text = titleText
         titleLabel.font = titleFont
         titleLabel.sizeToFit()
+        self.titleLabel.shadowOffset = CGSize(width: 0, height: 0)
         updateTitleVisibility(animated)
     }
     
@@ -699,7 +703,7 @@ open class SkyFloatingLabelTextField: UITextField { // swiftlint:disable:this ty
                 self.titleLabel.frame = frame
             }
             
-            
+            self.titleLabel.shadowOffset = CGSize(width: 0, height: 0)
             
         }
         if animated {
