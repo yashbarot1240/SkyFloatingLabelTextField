@@ -43,7 +43,7 @@ open class SkyFloatingLabelTextField: UITextField { // swiftlint:disable:this ty
     private func createBorder() {
         let borderFrame = self.bounds
         
-        borderLayer.frame = CGRect(x: borderFrame.origin.x, y: (borderFrame.origin.y + (titleHeight() * 0.5)), width: borderFrame.size.width, height: (borderFrame.size.height - (titleHeight() * 0.5)) )
+        borderLayer.frame = CGRect(x: borderFrame.origin.x, y: (borderFrame.origin.y + 3 + (titleHeight() * 0.5)), width: borderFrame.size.width, height: (borderFrame.size.height - (titleHeight() * 0.5)) )
 //        borderLayer.layer.borderWidth = (isFirstResponder || text!.isNotEmpty) ? borderSize.active : borderSize.inactive
         //        borderLayer.backgroundColor = UIColor.red.withAlphaComponent(0.3).cgColor
         //        borderLayer.cornerRadius = 5
@@ -541,7 +541,7 @@ open class SkyFloatingLabelTextField: UITextField { // swiftlint:disable:this ty
         
        let  borderView = borderLayer
           let height = editingOrSelected ? selectedBorderHeight : borderHeight
-        borderView.frame =  CGRect(x: borderFrame.origin.x, y: (borderFrame.origin.y + (titleHeight() * 0.5)), width: borderFrame.size.width, height: (borderFrame.size.height - (titleHeight() * 0.5)) )
+        borderView.frame =  CGRect(x: borderFrame.origin.x, y: (borderFrame.origin.y + 3 + (titleHeight() * 0.5)), width: borderFrame.size.width, height: (borderFrame.size.height - (titleHeight() * 0.5)) )
         borderLayer.layer.borderWidth = height
         updateBorderColor()
     }
@@ -775,12 +775,12 @@ open class SkyFloatingLabelTextField: UITextField { // swiftlint:disable:this ty
             let sizeFon = (myText! as NSString).size(withAttributes: fontAttributes)
             if editing {
                 
-                return CGRect(x: 10, y: 0, width: sizeFon.width, height: titleHeight())
+                return CGRect(x: 10, y: 3, width: sizeFon.width, height: titleHeight())
             }
             return CGRect(x: 10, y: titleHeight(), width: sizeFon.width, height: titleHeight())
         }else{
             if editing {
-                return CGRect(x: 10, y: 0, width: bounds.size.width, height: titleHeight())
+                return CGRect(x: 10, y: 3, width: bounds.size.width, height: titleHeight())
             }
             return CGRect(x: 10, y: titleHeight(), width: bounds.size.width, height: titleHeight())
         }
