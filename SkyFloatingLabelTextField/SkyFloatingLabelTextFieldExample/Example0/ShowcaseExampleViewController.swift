@@ -125,21 +125,21 @@ class ShowcaseExampleViewController: UIViewController, UITextFieldDelegate {
             comment: "title for person title field"
         )
 
-        nameField.placeholder = NSLocalizedString(
-            "Name",
-            tableName: "SkyFloatingLabelTextField",
-            comment: "placeholder for traveler name field"
-        )
-        nameField.selectedTitle = NSLocalizedString(
-            "Name",
-            tableName: "SkyFloatingLabelTextField",
-            comment: "selected title for traveler name field"
-        )
-        nameField.title = NSLocalizedString(
-            "Name",
-            tableName: "SkyFloatingLabelTextField",
-            comment: "title for traveler name field"
-        )
+//        nameField.placeholder = NSLocalizedString(
+//            "Name",
+//            tableName: "SkyFloatingLabelTextField",
+//            comment: "placeholder for traveler name field"
+//        )
+//        nameField.selectedTitle = NSLocalizedString(
+//            "Name",
+//            tableName: "SkyFloatingLabelTextField",
+//            comment: "selected title for traveler name field"
+//        )
+//        nameField.title = NSLocalizedString(
+//            "Name",
+//            tableName: "SkyFloatingLabelTextField",
+//            comment: "title for traveler name field"
+//        )
 
         emailField.placeholder = NSLocalizedString(
             "Email",

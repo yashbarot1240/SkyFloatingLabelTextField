@@ -808,7 +808,10 @@ open class SkyFloatingLabelTextField: UITextField { // swiftlint:disable:this ty
             paragraph.headIndent = 10
             let fontAttributes = [NSAttributedString.Key.font: font,NSAttributedString.Key.paragraphStyle: paragraph]
             let myText = selectedTitleOrTitlePlaceholder()
-            let sizeFon = (myText! as NSString).size(withAttributes: fontAttributes)
+            var sizeFon = CGSize(width: 0, height: 0)
+            if myText != nil {
+                sizeFon = (myText! as NSString).size(withAttributes: fontAttributes)
+            }
             if editing {
                 
                 return CGRect(x: 10, y: 3, width: sizeFon.width, height: titleHeight())

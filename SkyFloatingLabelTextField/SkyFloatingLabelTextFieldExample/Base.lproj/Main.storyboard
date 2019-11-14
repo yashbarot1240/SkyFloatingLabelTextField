@@ -789,7 +789,7 @@ In this example an icon label is added and placeholder label and textfield are p
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <containerView key="tableHeaderView" opaque="NO" contentMode="scaleToFill" misplaced="YES" id="pEh-Bj-WOF">
-                            <rect key="frame" x="0.0" y="0.0" width="400" height="289"/>
+                            <rect key="frame" x="0.0" y="-67" width="425" height="289"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                             <connections>
                                 <segue destination="Xf7-hu-W0W" kind="embed" id="xe8-ss-8aS"/>
@@ -985,11 +985,11 @@ In this example an icon label is added and placeholder label and textfield are p
                         <viewControllerLayoutGuide type="bottom" id="FS4-AH-FdX"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="dkS-M1-t0L">
-                        <rect key="frame" x="0.0" y="0.0" width="400" height="289"/>
+                        <rect key="frame" x="0.0" y="0.0" width="425" height="289"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="drh-wZ-CMd" customClass="SkyFloatingLabelTextFieldWithIcon" customModule="SkyFloatingLabelTextFieldExample" customModuleProvider="target">
-                                <rect key="frame" x="20" y="0.0" width="170" height="43"/>
+                                <rect key="frame" x="20" y="0.0" width="182.5" height="43"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="43" id="wj1-vc-MMi"/>
                                 </constraints>
@@ -1001,7 +1001,7 @@ In this example an icon label is added and placeholder label and textfield are p
                                 </userDefinedRuntimeAttributes>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Lvb-XU-w6i" customClass="SkyFloatingLabelTextFieldWithIcon" customModule="SkyFloatingLabelTextFieldExample" customModuleProvider="target">
-                                <rect key="frame" x="210" y="0.0" width="170" height="43"/>
+                                <rect key="frame" x="222.5" y="0.0" width="182.5" height="43"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="43" id="6bd-aa-7iG"/>
                                 </constraints>
@@ -1026,7 +1026,7 @@ In this example an icon label is added and placeholder label and textfield are p
                                 </userDefinedRuntimeAttributes>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VnD-me-4jL" customClass="SkyFloatingLabelTextField" customModule="SkyFloatingLabelTextFieldExample" customModuleProvider="target">
-                                <rect key="frame" x="90" y="73" width="135" height="43"/>
+                                <rect key="frame" x="90" y="73" width="147.5" height="43"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="43" id="tg1-wG-kuz"/>
                                 </constraints>
@@ -1034,7 +1034,6 @@ In this example an icon label is added and placeholder label and textfield are p
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Name"/>
                                     <userDefinedRuntimeAttribute type="number" keyPath="borderHeight">
                                         <real key="value" value="1"/>
                                     </userDefinedRuntimeAttribute>
@@ -1053,7 +1052,7 @@ In this example an icon label is added and placeholder label and textfield are p
                                 </userDefinedRuntimeAttributes>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Fap-Uh-ovw" customClass="SkyFloatingLabelTextField" customModule="SkyFloatingLabelTextFieldExample" customModuleProvider="target">
-                                <rect key="frame" x="245" y="73" width="135" height="43"/>
+                                <rect key="frame" x="257.5" y="73" width="147.5" height="43"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="43" id="aLO-rq-CQS"/>
                                 </constraints>
@@ -1068,7 +1067,7 @@ In this example an icon label is added and placeholder label and textfield are p
                                 </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1tu-Rl-onB">
-                                <rect key="frame" x="280" y="156" width="100" height="30"/>
+                                <rect key="frame" x="305" y="156" width="100" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="100" id="bRc-N7-vw9"/>
                                 </constraints>
